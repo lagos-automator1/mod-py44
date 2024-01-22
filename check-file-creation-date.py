@@ -22,7 +22,7 @@ def main():
 
     # calculate how long ago the item was modified
     mod_date = datetime.datetime.now() - datetime.datetime.fromtimestamp(path.getmtime(user_input))
-    print("This file hasn't been touched since ", mod_date, ".")
+    print("This file hasn't been touched since ", mod_date, "ago.")
     print("Or,", mod_date.total_seconds(),"seconds")
 
 
