@@ -20,6 +20,11 @@ def main():
     # constructs datetime object using get modification time function(getmtime)
     print (datetime.datetime.fromtimestamp(path.getmtime(user_input)))
 
+    # calculate how long ago the item was modified
+    mod_date = datetime.datetime.now() - datetime.datetime.fromtimestamp(path.getmtime(user_input))
+    print("This file hasn't been touched since ", mod_date, ".")
+    print("Or,", mod_date.total_seconds(),"seconds")
+
 
 if __name__ == "__main__":
     main()
